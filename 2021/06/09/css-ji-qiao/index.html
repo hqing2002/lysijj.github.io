@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, HTML,CSS,javascript,算法,java等">
+    <meta name="keywords" content="CSS技巧, HTML,CSS,javascript,算法,java等">
     <meta name="description" content="个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Lys的小站</title>
+    <title>CSS技巧 | Lys的小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/b638c3be586a56d0c58419ceec459b60_1483416347978.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">CSS技巧</h1>
                 </div>
             </div>
         </div>
@@ -445,8 +445,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BC%96%E7%A8%8B/">
-                                <span class="chip bg-color">编程</span>
+                            <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                <span class="chip bg-color">前端</span>
+                            </a>
+                        
+                            <a href="/tags/CSS/">
+                                <span class="chip bg-color">CSS</span>
                             </a>
                         
                     </div>
@@ -461,7 +465,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-08
+                    2021-06-09
                 </div>
                 
 
@@ -475,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1
+                    782
                 </div>
                 
 
@@ -492,7 +496,124 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="HelloWorld"><a href="#HelloWorld" class="headerlink" title="HelloWorld"></a>HelloWorld</h1>
+                <h1 id="css技巧"><a href="#css技巧" class="headerlink" title="css技巧"></a>css技巧</h1><h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><pre class=" language-css"><code class="language-css">一、
+实际开发中对于成块的a标签我们会用li来包含a标签
+不然搜索引擎会把你的网站排名降低<span class="token punctuation">(</span>有堆砌关键字的嫌疑<span class="token punctuation">)</span>
+写法
+ul>li*<span class="token number">3</span>>a
+
+&lt;ul>
+    &lt;li>&lt;a href=<span class="token string">""</span>>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href=<span class="token string">""</span>>&lt;/a>&lt;/li>
+    &lt;li>&lt;a href=<span class="token string">""</span>>&lt;/a>&lt;/li>
+&lt;/ul>
+
+然后css里面写一个<span class="token punctuation">(</span>去除所以li的项目符号<span class="token punctuation">)</span>
+li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span> none <span class="token important">!important</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+然后给li加浮动让其一行显示
+
+二、
+盒子宽度或者高度想随着内容变多而变多就不要设置宽和高
+用padding撑开盒子
+还有一点是行内元素给高/宽前先<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+文字属性的垂直居中用行高
+
+<span class="token number">1......</span>去除边框合并加强的问题
+加margin的负值
+比如<span class="token number">1</span>px和<span class="token number">1</span>px边框通过浮动叠加在了一起
+但是那个合并的边框就会加重
+然后写一个margin的负值
+这个值是边框的宽度
+但是这样有一个问题
+这个边框的原理其实是margin使边上的盒子互相压住
+所以想用鼠标划过盒子时想让四个框都显示
+则在<span class="token property">div</span><span class="token punctuation">:</span><span class="token property">hover</span><span class="token punctuation">:</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+这样给了相对定位会压住浮动和标准流的盒子
+但是如果在原来的每个盒子里本来就有绝对定位
+那就得改成
+则在<span class="token property">div</span><span class="token punctuation">:</span><span class="token property">hover</span><span class="token punctuation">:</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+
+<span class="token number">2......</span>文字围绕元素
+给被围绕的元素加浮动
+文字不加浮动即可
+
+<span class="token number">3.</span>行内块元素给父盒子设置<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+即可全部居中
+</code></pre>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>超出文本用省略号显示
+单行文本溢出显示省略号
+<span class="token number">1.</span>先强制一行内显示文本
+<span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token number">2.</span>超出的部分隐藏
+<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token number">3.</span> 文字用省略号代替超出部分
+<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+
+<span class="token number">2.</span>制作三角形
+利用盒子的一种特性
+盒子宽和高为零
+css代码
+<span class="token number">.</span>box &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span><span class="token number">0</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span><span class="token number">0</span>px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 三角大小 soild transparent<span class="token punctuation">;</span>
+    border-三角形朝向的反方向<span class="token property">-color</span><span class="token punctuation">:</span> 三角的颜色<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    设置三角的位置
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+
+一般小三角用span做
+
+<span class="token number">3.</span>输入框
+输入框取消蓝框
+<span class="token property">input</span><span class="token punctuation">:</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+文本域取消用户拖拽功能
+<span class="token property">textarea</span><span class="token punctuation">:</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+    resize； none<span class="token punctuation">;</span>
+&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+另外文本域写在一行，不然输入的时候光标会跑一个格子
+
+改变placeholder
+
+<span class="token number">4.</span>居中
+在图片设置
+vertical-align
+属性
+<span class="token property">baseline</span><span class="token punctuation">:</span> 基线对齐
+<span class="token property">top</span><span class="token punctuation">:</span> 顶端对齐
+<span class="token property">middle</span><span class="token punctuation">:</span> 中部对齐
+<span class="token property">bottom</span><span class="token punctuation">:</span> 底部对齐
+
+另外一个图片在盒子中会有一小段空白缝隙
+解决方法
+<span class="token number">1.</span>vertical-align
+只要不是基线对齐都行
+<span class="token number">2.</span>转化为行内元素和行内块元素
+
+<span class="token number">5.</span>隐藏
+在图片设置
+vertical-align
+属性
+<span class="token property">baseline</span><span class="token punctuation">:</span> 基线对齐
+<span class="token property">top</span><span class="token punctuation">:</span> 顶端对齐
+<span class="token property">middle</span><span class="token punctuation">:</span> 中部对齐
+<span class="token property">bottom</span><span class="token punctuation">:</span> 底部对齐
+
+另外一个图片在盒子中会有一小段空白缝隙
+解决方法
+<span class="token number">1.</span>vertical-align
+只要不是基线对齐都行
+<span class="token number">2.</span>转化为行内元素和行内块元素
+</code></pre>
+
                 
             </div>
             <hr/>
@@ -518,7 +639,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lysijj.github.io/2021/06/08/hello-world/">http://lysijj.github.io/2021/06/08/hello-world/</a>
+                    <a href="http://lysijj.github.io/2021/06/09/css-ji-qiao/">http://lysijj.github.io/2021/06/09/css-ji-qiao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -556,8 +677,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BC%96%E7%A8%8B/">
-                                    <span class="chip bg-color">编程</span>
+                                <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                                    <span class="chip bg-color">前端</span>
+                                </a>
+                            
+                                <a href="/tags/CSS/">
+                                    <span class="chip bg-color">CSS</span>
                                 </a>
                             
                         </div>
@@ -995,64 +1120,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/06/08/abc/">
+                <a href="/2021/06/09/css-ji-qiao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="abc">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CSS技巧">
                         
-                        <span class="card-title">abc</span>
+                        <span class="card-title">CSS技巧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Lys
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/06/08/hello-world/">
-                    <div class="card-image">
-                        
-                        <img src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/b638c3be586a56d0c58419ceec459b60_1483416347978.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            HELLOWORLD
+                            CSS
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
                             </span>
                         <span class="publish-author">
                             
@@ -1066,8 +1156,61 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%BC%96%E7%A8%8B/">
-                        <span class="chip bg-color">编程</span>
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/06/09/css-dong-hua/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="CSS技巧">
+                        
+                        <span class="card-title">CSS技巧</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            CSS
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Lys
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                    <a href="/tags/CSS/">
+                        <span class="chip bg-color">CSS</span>
                     </a>
                     
                 </div>
