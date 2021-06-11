@@ -30,7 +30,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.4.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 
@@ -459,14 +459,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-09
+                    2021-06-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.4k
                 </div>
                 
 
@@ -478,54 +478,57 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基本模型"><a href="#基本模型" class="headerlink" title="基本模型"></a>基本模型</h1><h2 id="emmet语法"><a href="#emmet语法" class="headerlink" title="emmet语法"></a>emmet语法</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>写上标签按tap或者回车直接生成结构
+                <h1 id="基本模型"><a href="#基本模型" class="headerlink" title="基本模型"></a>基本模型</h1><h2 id="emmet语法"><a href="#emmet语法" class="headerlink" title="emmet语法"></a>emmet语法</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">1.写上标签按tap或者回车直接生成结构
 
-<span class="token number">2.</span>快速生成标签 div*个数 例如 div*<span class="token number">10</span>按下回车或Tap生成<span class="token number">10</span>个div标签
+2.快速生成标签 div*个数 例如 div*10按下回车或Tap生成10个div标签
 
-<span class="token number">3.</span>父子标签
-父>子*个数<span class="token punctuation">(</span>个数可写可不写<span class="token punctuation">)</span>
+3.父子标签
+父>子*个数(个数可写可不写)
 例如
-table>tr*<span class="token number">2</span>>td*<span class="token number">10</span>
+table>tr*2>td*10
 生成一个两行每行十格的单元格
 
-<span class="token number">4.</span>兄弟标签
+4.兄弟标签
 兄+弟
 
-<span class="token number">5.</span>类名或id
-标签<span class="token number">.</span>类名     p<span class="token number">.</span>qq--->  &lt;p class=<span class="token string">"qq"</span>>&lt;/p>
-标签#id       div#qq--> &lt;div id=<span class="token string">"qq"</span>>&lt;/div>
+5.类名或id
+标签.类名     p.qq--->  &lt;p class="qq">&lt;/p>
+标签#id       div#qq--> &lt;div id="qq">&lt;/div>
 不写标签标签默认为div
 
-<span class="token number">6.</span>自增
+6.自增
 标签加类名但是加一个$*
-p<span class="token number">.</span>qq$*<span class="token number">2</span>
+p.qq$*2
 
-    &lt;p class=<span class="token string">"qq1"</span>>&lt;/p>
-    &lt;p class=<span class="token string">"qq2"</span>>&lt;/p>
+    &lt;p class="qq1">&lt;/p>
+    &lt;p class="qq2">&lt;/p>
 
-<span class="token number">7.</span>自带文字
-q&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>干饭!&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>--->   &lt;p>干饭!&lt;/p>
-</code></pre>
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>背景颜色
+7.自带文字
+q</span> <span class="token punctuation">&#123;</span>干饭!<span class="token punctuation">&#125;</span> --->   &lt;p>干饭!&lt;/p><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">1.背景颜色
 background-color
 
-<span class="token number">2.</span>背景图片
-background-image <span class="token url">url()</span><span class="token punctuation">;</span>
+2.背景图片
+background-image <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token punctuation">)</span></span><span class="token selector">;
 背景图片的平铺
-background-repeat
-&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+background-repeat</span>
+<span class="token punctuation">&#123;</span>
     repeat
     norepeat 不平铺
     repeat-x 沿x轴平铺
     repeat-y 沿y轴平铺
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-<span class="token number">3.</span>背景图片位置
+3.背景图片位置
 <span class="token property">background-position</span><span class="token punctuation">:</span> x y<span class="token punctuation">;</span>
 后面跟俩方位名词时不限顺序
 <span class="token property">background-position</span><span class="token punctuation">:</span> center right<span class="token punctuation">;</span>
@@ -536,71 +539,72 @@ top bottom
 也可跟具体数字或者混搭
 但一定注意顺序先x后y
 
-<span class="token number">4.</span>背景固定
+4.背景固定
 <span class="token property">background-attachment</span><span class="token punctuation">:</span> <span class="token punctuation">;</span>
 scroll背景滚动
 fixed背景固定
 
-<span class="token number">5.</span>背景复合写法
+5.背景复合写法
 <span class="token property">background</span><span class="token punctuation">:</span> 背景颜色 背景地址图片 背景平铺 背景图像滚动 背景图片的位置<span class="token punctuation">;</span>
 
-<span class="token number">6.</span>背景透明度
-background <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>,<span class="token number">0</span>,<span class="token number">0</span>,a<span class="token punctuation">)</span><span class="token punctuation">;</span>
-a取值<span class="token number">0</span>~<span class="token number">1</span>
-<span class="token number">0</span>完全透明
-<span class="token number">1</span>完全不透明
-</code></pre>
-<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>text-align
+6.背景透明度
+background <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+a取值0~1
+0完全透明
+1完全不透明
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="文本属性"><a href="#文本属性" class="headerlink" title="文本属性"></a>文本属性</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">1.text-align
 水平对齐方式
 left center right
 垂直居中让行高
 line-height等于width即可
 
-<span class="token number">2.</span>text-decoration 
+2.text-decoration 
 underline--下划线
 line-through--删除线
 overline--上划线
 
 
-<span class="token number">3.</span>text-indent
+3.text-indent
 首行缩进单位em/px
-<span class="token number">1</span>em为一个字
-<span class="token number">2</span>em首行缩进两个字符
+1em为一个字
+2em首行缩进两个字符
 
-<span class="token number">4.</span>line-height
+4.line-height
 行间距
 行间距==字体大小+上下两间距
 改行间距==改上下两间距
 
-<span class="token number">5.</span>list-style
+5.list-style
 去点项目符号前的小圆点
-属性为none
-</code></pre>
-<h2 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h2><pre class=" language-css"><code class="language-css">内部标签
+属性为none<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="引入方式"><a href="#引入方式" class="headerlink" title="引入方式"></a>引入方式</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">内部标签
 在head里写一个
 &lt;style>
-选择器 &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    属性<span class="token punctuation">:</span> 属性值<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-&lt;/style>
+选择器</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">属性</span><span class="token punctuation">:</span> 属性值<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">&lt;/style>
 
 行内样式
-&lt;h<span class="token number">1</span> style=<span class="token string">"属性: 属性值;"</span>>
-&lt;/h<span class="token number">1</span>>
+&lt;h1 style="属性: 属性值;">
+&lt;/h1>
 
 外部样式
-重新创建一个后缀为<span class="token number">.</span>css的文件
-在<span class="token number">.</span>html的&lt;head>&lt;/head>中写入
-&lt;link rel=<span class="token string">"stylesheet"</span> href=<span class="token string">"路径"</span>>
-然后<span class="token number">.</span>css文件的书写方式为<span class="token punctuation">(</span>直接这样写就行<span class="token punctuation">)</span>
-选择器 &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    属性<span class="token punctuation">:</span> 属性值<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="元素模式"><a href="#元素模式" class="headerlink" title="元素模式"></a>元素模式</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>块元素
+重新创建一个后缀为.css的文件
+在.html的&lt;head>&lt;/head>中写入
+&lt;link rel="stylesheet" href="路径">
+然后.css文件的书写方式为(直接这样写就行)
+选择器</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">属性</span><span class="token punctuation">:</span> 属性值<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="元素模式"><a href="#元素模式" class="headerlink" title="元素模式"></a>元素模式</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">1.块元素
 &lt;div>&lt;/div>
 &lt;ol>&lt;/ol>
-&lt;h<span class="token number">1</span>>&lt;/h<span class="token number">1</span>>
+&lt;h1>&lt;/h1>
 &lt;p>&lt;/p>
 &lt;ul>&lt;/ul>
 &lt;li>&lt;/li>等
@@ -613,74 +617,74 @@ p里面只能套行内元素或行内块不能套块
 比如p里面套p
 
 
-<span class="token number">2.</span>行内元素
+2.行内元素
 相邻元素在一行上
 不能直接设置宽和高
 行内元素只能容纳行内元素或者文本
 
 
-<span class="token number">3.</span>a中还能放块元素
+3.a中还能放块元素
 &lt;a>
 &lt;div>&lt;/div>
 &lt;/a>
 
-<span class="token number">4.</span>行内块元素
+4.行内块元素
 具备块和行的特性
 修改宽和高
 一行多个
 相邻有空隙
 
-<span class="token number">5.</span><span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+5.<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token selector">;
 属性加上后行元素边块元素
-a &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+a</span> <span class="token punctuation">&#123;</span>
     <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 <span class="token property">display</span><span class="token punctuation">:</span> inline
 块元素转行元素
 <span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span>
-转化为行内块
-</code></pre>
-<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>font-family
+转化为行内块<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">1.font-family
 设置字体类型 宋体，楷体
 可写多个如果前面的浏览器无法显示用后面的
 每个字体用空格隔开
 
 
-<span class="token number">2.</span>font-size
-默认为<span class="token number">16</span>px 写单位px
+2.font-size
+默认为16px 写单位px
 
-<span class="token number">3.</span>font-weight
+3.font-weight
 字体粗细
 无单位
-bold--粗--<span class="token number">700</span>
+bold--粗--700
 bolder--极粗
 lighter--细
-normal--<span class="token number">400</span>
+normal--400
 
 
-<span class="token number">4.</span>font-style
+4.font-style
 normal--正常
 italic--斜体
 
-<span class="token number">5.</span>字体属性的复合
+5.字体属性的复合
 按照格式
 <span class="token property">font</span><span class="token punctuation">:</span> font-style font-weight font-size/font-height font-family<span class="token punctuation">;</span>
 例子
-<span class="token property">font</span><span class="token punctuation">:</span> normal <span class="token number">1000</span> <span class="token number">16</span>px/<span class="token number">15</span>px 宋体<span class="token punctuation">;</span>
+<span class="token property">font</span><span class="token punctuation">:</span> normal 1000 16px/15px 宋体<span class="token punctuation">;</span>
 属性顺序固定用空格隔开
 除了font-size 和 font-family必须写
 其他可写可不写但是一定注意顺序
 
-<span class="token number">6.</span>字体间距
-letter-spacing
-</code></pre>
-<h2 id="三种特性"><a href="#三种特性" class="headerlink" title="三种特性"></a>三种特性</h2><pre class=" language-css"><code class="language-css"><span class="token number">1.</span>层叠性
+6.字体间距
+letter-spacing<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="三种特性"><a href="#三种特性" class="headerlink" title="三种特性"></a>三种特性</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">1.层叠性
 前提条件选择器相同
 都是类选择或者标签选择
 重复的样式设定遵循就近原则
-离标签越接近<span class="token punctuation">(</span>物理意义上<span class="token punctuation">)</span>
+离标签越接近(物理意义上)
 
-<span class="token number">2.</span>继承性
+2.继承性
 子标签会继承父标签的一些性质
 text
 font
@@ -688,37 +692,37 @@ line
 color
 等文本样式
 这样就可以处理一个大标签来处理相同的属性
-例如给文本都设置为<span class="token number">14</span>px
+例如给文本都设置为14px
 可以让body属性标签改
-body &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">14</span>px<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+body</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 14px<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
 
-行高的继承<span class="token punctuation">:</span>行高中若不写多少px写数字
+<span class="token selector">行高的继承:行高中若不写多少px写数字
 则表示儿子大小的多少倍
-如body中写行高为<span class="token number">1.5</span>
-字大小为<span class="token number">10</span>px则继承行高为<span class="token number">1.5</span>*<span class="token number">10</span>
+如body中写行高为1.5
+字大小为10px则继承行高为1.5*10
 
-<span class="token number">3.</span>优先性
+3.优先性
 选择器不同看选择器权重   由小到大
-*<span class="token punctuation">(</span>通配符选择器<span class="token punctuation">)</span>             <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span>
+*(通配符选择器)             0 0 0 0
 
-元素选择器                  <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span>
+元素选择器                  0 0 0 1
 
-类选择器 伪类选择器          <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span>
+类选择器 伪类选择器          0 0 1 0
 
-id选择器                    <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span>
+id选择器                    0 1 0 0
 
-行内样式                    <span class="token number">1</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> 
+行内样式                    1 0 0 0 
 
-<span class="token important">!important</span>                  正无穷
+!important                  正无穷
 最后一个的使用方法是在属性中加入这句话
 优先级直接起飞
-p &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> red!important<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-则优先级直接顶到最大
+p</span> <span class="token punctuation">&#123;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">则优先级直接顶到最大
 
 继承的权重最低
 则解决了a链接不能通过改父辈元素性质而改变的问题
@@ -732,32 +736,32 @@ p &amp;<span class="token hexcode">#123</span><span class="token punctuation">;<
         &lt;li>&lt;/li>
     &lt;/ol>
 
-ol li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+ol li</span> <span class="token punctuation">&#123;</span>
 
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token selector">li</span> <span class="token punctuation">&#123;</span>
 
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-则前面选择器权重大为<span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> + <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> == <span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">2</span>
+<span class="token punctuation">&#125;</span>
+<span class="token selector">则前面选择器权重大为0 0 0 1 + 0 0 0 1 == 0 0 0 2
 但是注意不能进位
-<span class="token punctuation">(</span><span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span><span class="token punctuation">)</span>*<span class="token number">10</span>=<span class="token number">0</span> <span class="token number">0</span> <span class="token number">0</span> <span class="token number">10</span> 没有进位
+(0 0 0 1)*10=0 0 0 10 没有进位
 
-    &lt;ol class=<span class="token string">"qq"</span>>
-        &lt;li class=<span class="token string">"123"</span>>&lt;/li>
+    &lt;ol class="qq">
+        &lt;li class="123">&lt;/li>
         &lt;li>&lt;/li>
         &lt;li>&lt;/li>
     &lt;/ol>
 
-<span class="token number">.</span>qq li &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+.qq li</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
 
-<span class="token number">.123</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token selector">.123</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
 
-<span class="token number">.</span>qq <span class="token number">.123</span> &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-第一个选择器权重为<span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">1</span>
-第二个 <span class="token number">0</span> <span class="token number">0</span> <span class="token number">1</span> <span class="token number">0</span>
-第三个位 <span class="token number">0</span> <span class="token number">0</span> <span class="token number">2</span> <span class="token number">0</span>
-</code></pre>
+<span class="token selector">.qq .123</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span>
+第一个选择器权重为0 0 1 1
+第二个 0 0 1 0
+第三个位 0 0 2 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
