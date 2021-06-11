@@ -459,14 +459,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-09
+                    2021-06-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    818
+                    808
                 </div>
                 
 
@@ -486,7 +486,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="浮动和定位"><a href="#浮动和定位" class="headerlink" title="浮动和定位"></a>浮动和定位</h1><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><pre class=" language-css"><code class="language-css">使元素加上z轴属性
+                <h1 id="浮动和定位"><a href="#浮动和定位" class="headerlink" title="浮动和定位"></a>浮动和定位</h1><h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">使元素加上z轴属性
 脱离二维来到三维
 所以原有位置会被占了
 所以一般上下用基础
@@ -503,64 +503,64 @@ margin啥啥啥的
 
 清除浮动
 当父元素没给高度时盒子浮动或者绝对定位后将会导致父盒子还在一维但是里面东西跑二维去了
-所以父盒子高度会变成<span class="token number">0</span>
+所以父盒子高度会变成0
 会影响下面的标准流盒子
 
-方法<span class="token number">1</span>：额外标签法
+方法1：额外标签法
 再盒子最后一个浮动元素后再写一个盒子
 然后加上属性
 <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>（该属性的作用是清除浮动）
 相当于加了一堵墙
 
-方法<span class="token number">2</span>：给父元素加<span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span><span class="token punctuation">(</span>还能外边距合并<span class="token punctuation">)</span>（缺点无法显示溢出的部分）
+<span class="token property">方法2：给父元素加overflow</span><span class="token punctuation">:</span>hidden<span class="token selector">;(还能外边距合并)（缺点无法显示溢出的部分）
 
-方法<span class="token property">3</span><span class="token punctuation">:</span>给父盒子加入一个类<span class="token function">clearfix</span><span class="token punctuation">(</span>然后将下面粘贴到css中<span class="token punctuation">)</span><span class="token punctuation">(</span>切记是父盒子<span class="token punctuation">(</span>父盒子里面包含一堆浮动的盒子<span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token number">.</span><span class="token property">clearfix</span><span class="token punctuation">:</span>after &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+方法3:给父盒子加入一个类clearfix(然后将下面粘贴到css中)(切记是父盒子(父盒子里面包含一堆浮动的盒子))
+.clearfix:after</span>  <span class="token punctuation">&#123;</span>
     <span class="token property">content</span><span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">;</span>
     <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
     <span class="token property">clear</span><span class="token punctuation">:</span> both<span class="token punctuation">;</span>
     <span class="token property">visibility</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-<span class="token number">.</span>clearfix &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    *<span class="token property">zoom</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
-</code></pre>
-<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><pre class=" language-css"><code class="language-css">定位=定位+边偏移（上下左右四个属性）
+<span class="token punctuation">&#125;</span>
+<span class="token selector">.clearfix</span> <span class="token punctuation">&#123;</span>
+    *<span class="token property">zoom</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="定位"><a href="#定位" class="headerlink" title="定位"></a>定位</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">定位=定位+边偏移（上下左右四个属性）
 定位有四种
 静态定位=无定位=标准流无用
 
-相对定位<span class="token punctuation">(</span>relative<span class="token punctuation">)</span>
-&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
-    选择器 &amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+相对定位(relative)</span>
+<span class="token punctuation">&#123;</span>
+    <span class="token selector">选择器</span> <span class="token punctuation">&#123;</span>
         <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
         <span class="token property">top</span><span class="token punctuation">:</span>
         <span class="token property">left</span><span class="token punctuation">:</span>
-    &amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
     相对位置是相对原来的位置
     但是相对定位不会像浮动那样上升一个维度
     所以原来的位置会保留着
     典型应用是给绝对定位当爹的
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
-绝对定位的特点<span class="token punctuation">(</span>absolute<span class="token punctuation">)</span>
-&amp;<span class="token hexcode">#123</span><span class="token punctuation">;</span>
+<span class="token selector">绝对定位的特点(absolute)</span>
+<span class="token punctuation">&#123;</span>
     没有父元素或者父元素没有定位则以浏览器为准进行定位
     找定位是一直往上找如果找不到已网页
     比如父亲没有爷爷有已爷爷为主
     跟浮动一样会上升一个维度
-&amp;<span class="token hexcode">#125</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span>
 
 用定位是父亲大盒子一定要有相对定位
 
 
 固定定位<span class="token punctuation">(</span>fixed<span class="token punctuation">)</span>
-<span class="token number">1.</span>以网页可视化窗口作为定位
+1.以网页可视化窗口作为定位
 固定定位为三维
 不占用二维位置
 
-<span class="token number">2.</span>以内容板块作为定位
-首先用固定定位到left：<span class="token number">50%</span>
+2.以内容板块作为定位
+首先用固定定位到left：50%
 然后在margin到板块的宽度的一半
 
 
@@ -578,14 +578,14 @@ top等属性为当距离浏览器上沿多少px是为粘性
 z-index
 觉得谁在上面数值越上越靠上
 
-加了绝对定位的盒子不能用<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>来设置水平居中的
+<span class="token property">加了绝对定位的盒子不能用margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>来设置水平居中的
 算法
-先<span class="token property">left</span><span class="token punctuation">:</span><span class="token number">50%</span>
-再<span class="token property">margin-left</span><span class="token punctuation">:</span>该盒子宽的一半*<span class="token punctuation">(</span>-<span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token property">margin-left</span><span class="token punctuation">:</span>-<span class="token number">20</span>px<span class="token punctuation">;</span>
-<span class="token property">top</span><span class="token punctuation">:</span><span class="token number">50%</span>
-<span class="token property">margin-top</span><span class="token punctuation">:</span>该盒子高的一半
-</code></pre>
+<span class="token property">先left</span><span class="token punctuation">:</span>50%
+<span class="token property">再margin-left</span><span class="token punctuation">:</span>该盒子宽的一半*<span class="token punctuation">(</span>-1<span class="token punctuation">)</span>
+<span class="token property">margin-left</span><span class="token punctuation">:</span>-20px<span class="token punctuation">;</span>
+<span class="token property">top</span><span class="token punctuation">:</span>50%
+<span class="token property">margin-top</span><span class="token punctuation">:</span>该盒子高的一半<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
