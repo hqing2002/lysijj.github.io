@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="盒子模型和字体图标, HTML,CSS,javascript,算法,java等">
+    <meta name="keywords" content="CSS动画, HTML,CSS,javascript,算法,java等">
     <meta name="description" content="个人博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>盒子模型和字体图标 | Lys的小站</title>
+    <title>CSS动画 | Lys的小站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -302,12 +302,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lysijj/image-host/imageBlog/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/lysijj/image-host/imagelunbo/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">盒子模型和字体图标</h1>
+                    <h1 class="description center-align post-title">CSS动画</h1>
                 </div>
             </div>
         </div>
@@ -452,21 +452,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-09
+                    2021-06-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-11
+                    2021-06-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    11
                 </div>
                 
 
@@ -486,191 +486,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="盒子模型和字体图标"><a href="#盒子模型和字体图标" class="headerlink" title="盒子模型和字体图标"></a>盒子模型和字体图标</h1><h2 id="盒子的边框"><a href="#盒子的边框" class="headerlink" title="盒子的边框"></a>盒子的边框</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">border
-盒子的边框有三个属性
-border-width 边框的粗细
-border-style</span>
- <span class="token punctuation">&#123;</span>
-    <span class="token property">none</span> <span class="token punctuation">:</span>无边框
-    hidden：隐藏边框
-    solid：实线边框
-    double 双线边框
-    dashed 虚线边框
-    dotted 点线边框
-    groove 根据border-color的值画3D凹槽
-    ridge 根据border-color的值画菱形边框
-    inset 根据border-color的值画3D凹边
-    outset 根据border-color的值画3D凸边
-<span class="token punctuation">&#125;</span>
-border-color边框的颜色
-
-复合写法
-<span class="token property">border</span><span class="token punctuation">:</span> * * *<span class="token punctuation">;</span>
-没有顺序
-<span class="token property">border</span><span class="token punctuation">:</span> red 1px outset<span class="token punctuation">;</span>
-
-边框的四边修改
-<span class="token property">border-top</span><span class="token punctuation">:</span> red 1px outset<span class="token punctuation">;</span>
-<span class="token property">border-left</span><span class="token punctuation">:</span> yelloe 2px solid<span class="token punctuation">;</span>
-<span class="token property">border-right</span><span class="token punctuation">:</span> red 1px solid<span class="token punctuation">;</span>
-<span class="token property">border-bottom</span><span class="token punctuation">:</span> red 1px solid<span class="token selector">;
-
-
-用盒子改表格
-    &lt;table>
-        &lt;tr>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-        &lt;/tr>
-        &lt;tr>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-        &lt;/tr>
-        &lt;tr>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-            &lt;td>&lt;/td>
-        &lt;/tr>
-    &lt;/table>
-表格的边框有最外面的大四边形边框
-和每个单元格的一个小四边形边框
-一般修改表格的时候先合着写相同属性
-利用并集选择器   合并相邻的边框的写法
-table , th , td</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">border-collapse</span><span class="token punctuation">:</span> collapse<span class="token punctuation">;</span>
-    <span class="token property">border</span><span class="token punctuation">:</span> solid<span class="token punctuation">;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
-    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>226<span class="token punctuation">,</span> 19<span class="token punctuation">,</span> 19<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span class="token selector">然后在根据实际情况调整单一属性
-th</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-
-
-边框也会影响盒子的实际大小
-盒子大小=边框大小+盒子宽或高
-所以在模仿别人网页时测量大小要只测除去边框外的大小再测边框大小<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="盒子属性"><a href="#盒子属性" class="headerlink" title="盒子属性"></a>盒子属性</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">圆角边框
-<span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-<span class="token property">border-radius</span><span class="token punctuation">:</span>50%<span class="token punctuation">;</span>-------圆形
-border-radius： 高度的一半就是圆角矩形
-也可以这样写
-<span class="token property">border-radius</span><span class="token punctuation">:</span> a b c d<span class="token punctuation">;</span>
-上又下左<span class="token punctuation">(</span>顺时针<span class="token punctuation">)</span>
-也可以这样写
-border-left-top 左上角
-
-
-盒子阴影
-box-shadow
-属性
-h-shadow   必须 水平阴影的位置
-v-shadow   必须 竖直阴影的位置
-blur       模糊度
-spread     阴影的尺寸一般为负的
-color      阴影的颜色 一般写法为 <span class="token function">rgba</span><span class="token punctuation">(</span>0 <span class="token punctuation">,</span>0 <span class="token punctuation">,</span>0 <span class="token punctuation">,</span> .3<span class="token punctuation">)</span><span class="token selector">;
-内部和外部
-不写默认为外部写上inset 为内部
-可利用div:hover</span>
-<span class="token punctuation">&#123;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 10px 10px 10px -3px <span class="token function">rgba</span><span class="token punctuation">(</span>0 <span class="token punctuation">,</span>0 <span class="token punctuation">,</span>0 <span class="token punctuation">,</span> .3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-可写出来鼠标放上去的阴影
-
-文字阴影
-<span class="token property">text-shadow</span><span class="token punctuation">:</span>
-属性跟盒子一样没有后两个<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="内外边距和嵌套盒子"><a href="#内外边距和嵌套盒子" class="headerlink" title="内外边距和嵌套盒子"></a>内外边距和嵌套盒子</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">padding
-设置内容与边框的距离
-<span class="token property">padding</span><span class="token punctuation">:</span>5px<span class="token punctuation">;</span>--------------------------代表上下左右都有5px内边距
-<span class="token property">padding</span><span class="token punctuation">:</span>5px 10px<span class="token punctuation">;</span>---------------------代表上下5px 左右10px
-<span class="token property">padding</span><span class="token punctuation">:</span>5px 10px 20px<span class="token punctuation">;</span>----------------代表上5px 左右10px 下20px
-<span class="token property">padding</span><span class="token punctuation">:</span>5px 10px 20px 30px<span class="token punctuation">;</span>-----------代表上5px 右10px 下20px 左30px
-内边距也会影响盒子的大小
-
-但是若盒子未指定宽度则padding不会影响盒子大小
-若想只改变左右可以这样写 <span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
-以后的宽和高设置在父辈上这样就不会影响盒子大小
-
-
-外边距
-margin
-margin简写跟padding一样
-外边距合并
-上盒子设置了margin-bottom
-下盒子设置了margin-top
-则只会按照大的那个来算不会累加
-但是注意：浮动的盒子没有外边距合并或者塌陷的问题
-
-盒子<span class="token punctuation">(</span>块元素<span class="token punctuation">)</span>的水平居中
-盒子必须设置宽度
-左右外边框为auto
-<span class="token property">margin</span><span class="token punctuation">:</span> 0 auto<span class="token punctuation">;</span>
-
-行内元素或者行内块元素水平居中
-给父辈元素添加
-text <span class="token property">align</span><span class="token punctuation">:</span>center<span class="token selector">;
-
-清除内外边距的操作
-*</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token selector">行内元素为了照顾兼容性尽量只设置左右内边距不设置上下
-span 是行内元素
-
-盒子嵌套时俩盒子都设置了margin属性
-这时候会发生塌陷问题
-解决办法是
-1. 为父元素设置透明边框
-父元素</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">border</span><span class="token punctuation">:</span> 1px transparent solid<span class="token punctuation">;</span><span class="token punctuation">(</span>transparent是透明色<span class="token punctuation">)</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token selector">2.为父元素设置内边距
-父元素</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">padding</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-
-<span class="token selector">3.为父元素加一个属性
-父元素</span> <span class="token punctuation">&#123;</span>
-    <span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span>
-<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="字体图标"><a href="#字体图标" class="headerlink" title="字体图标"></a>字体图标</h1><h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">字体图标网站<span class="token punctuation">(</span>适用于一些小图标例如搜索<span class="token punctuation">)</span>
-1. icomoon   <span class="token property">http</span><span class="token punctuation">:</span>//icomoon.io
-2. iconfont  <span class="token property">http</span><span class="token punctuation">:</span>//www.iconfont.cn/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><pre class="line-numbers language-css" data-language="css"><code class="language-css">1.在网站下载好后将fonts文件夹放在网页根目录里<span class="token punctuation">(</span>跟网页同一级<span class="token punctuation">)</span>
-
-
-2.在下载的文件中找到style.css文件打开
-<span class="token property">从开头复制到display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span><span class="token punctuation">&#125;</span>
-然后将复制内容粘贴到css中
-
-
-3.在图标处建立一个盒子用于装图标
-然后在该盒子的css中设置文字图标的声明
-就是你复制的style.css这里面的第一段
-写好后进入最后一步
-
-4.在html放文字图标盒子里写上网站上给你的特殊符号即可一般都是长的为一个黑色框框<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+                <h1 id="ahdi"><a href="#ahdi" class="headerlink" title="ahdi"></a>ahdi</h1><p>赛后打赏</p>
+<p>阿达是基督教</p>
 
                 
             </div>
@@ -697,7 +514,7 @@ span 是行内元素
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lysijj.github.io/2021/06/09/he-zi-mo-xing-he-zi-ti-tu-biao/">http://lysijj.github.io/2021/06/09/he-zi-mo-xing-he-zi-ti-tu-biao/</a>
+                    <a href="http://lysijj.github.io/2021/06/15/1/">http://lysijj.github.io/2021/06/15/1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1178,9 +995,10 @@ span 是行内元素
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/06/15/1/">
                     <div class="card-image">
@@ -1197,9 +1015,9 @@ span 是行内元素
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1212,6 +1030,7 @@ span 是行内元素
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1234,12 +1053,12 @@ span 是行内元素
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/06/09/fu-dong-he-ding-wei/">
+                <a href="/2021/06/09/he-zi-mo-xing-he-zi-ti-tu-biao/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imageBlog/2.jpg" class="responsive-img" alt="浮动与定位">
+                        <img src="https://cdn.jsdelivr.net/gh/lysijj/image-host/imageBlog/3.jpg" class="responsive-img" alt="盒子模型和字体图标">
                         
-                        <span class="card-title">浮动与定位</span>
+                        <span class="card-title">盒子模型和字体图标</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
