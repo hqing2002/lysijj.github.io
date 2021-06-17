@@ -542,13 +542,14 @@ header .go-back i {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 110vh;
     padding: 0;
     border: 0;
     overflow: hidden;
     background-position: center center;
     background-size: cover;
     transform: translate3d(0px, 0px, 0px);
+    background-attachment: fixed;
 }
 
 .index-cover {
