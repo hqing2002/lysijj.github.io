@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>一些小东西</title>
+      <link href="/2021/06/20/xiao-dong-xi/"/>
+      <url>/2021/06/20/xiao-dong-xi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="QAQ"><a href="#QAQ" class="headerlink" title="QAQ"></a>QAQ</h1><ol><li><p>b站视频加速</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">控制台输入document.querySelector(&#39;video&#39;).playbackRate &#x3D; 5;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li><li><p>樱花特效</p><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.jsdelivr.net/gh/TaylorLottner/Fork/sakura.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li><p>看板娘</p><pre class="line-numbers language-JavaScript" data-language="JavaScript"><code class="language-JavaScript">&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;stevenjoezhang&#x2F;live2d-widget@latest&#x2F;autoload.js&quot;&gt;&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> JavaScript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>盒子模型和字体图标</title>
       <link href="/2021/06/09/he-zi-mo-xing-he-zi-ti-tu-biao/"/>
       <url>/2021/06/09/he-zi-mo-xing-he-zi-ti-tu-biao/</url>
