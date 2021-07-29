@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Math.abs</title>
+      <link href="/2021/07/29/math.abs/"/>
+      <url>/2021/07/29/math.abs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Java里面abs的一个小知识点"><a href="#Java里面abs的一个小知识点" class="headerlink" title="Java里面abs的一个小知识点"></a>Java里面abs的一个小知识点</h1><p>首先先附上一段简单的代码<br><img src="https://img-blog.csdnimg.cn/8371d3abb29d4934b8a45bbf5a1b000f.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzUyMjM3MTIz,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>看似没有什么问题但是当输入-2147483648时<br>结果为<br><img src="https://img-blog.csdnimg.cn/1fbe7a256a734a26b0ec2d8b7b76aba6.png" alt="在这里插入图片描述"></p><p>来看下源码</p><p><img src="https://img-blog.csdnimg.cn/324aa2846f9f4065b73f2161096608c5.png" alt="在这里插入图片描述"></p><p>简单粗暴 直接把小于零的数变成相反数</p><p>所有当输入是-2147483648时</p><p>会得出2147483648但是int最大是2147483647所以就向上取整</p><p><a href="https://blog.csdn.net/e3399/article/details/89290591?ops_request_misc=&request_id=&biz_id=102&utm_term=java%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E8%B6%85%E5%87%BA%E8%8C%83%E5%9B%B4&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-1-.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187">关于原码补码</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>springboot</title>
       <link href="/2021/07/12/springboot/"/>
       <url>/2021/07/12/springboot/</url>
